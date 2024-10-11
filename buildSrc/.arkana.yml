@@ -1,0 +1,17 @@
+should_generate_gradle_build_file: false
+namespace: "GradleKeys"
+kotlin_package_name: "arkana"
+should_generate_unit_tests: false
+kotlin_sources_path: "./kotlin"
+result_path: "."
+
+environments:
+  - dev
+  - qa
+  - production
+
+environment_secrets:
+  # - apiKey
+
+global_secrets:
+  # - clientID

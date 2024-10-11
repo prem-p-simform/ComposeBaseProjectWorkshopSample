@@ -1,0 +1,3 @@
+[submodule "settings"]
+	path = settings
+	url = https://github.com/SimformSolutionsPvtLtd/static_analysis_android.git

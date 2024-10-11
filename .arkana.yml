@@ -1,0 +1,9 @@
+result_path: "./ArkanaKeys"
+
+flavors:
+  - dev
+  - qa
+  - production
+
+global_secrets:
+  # - ApiKey
