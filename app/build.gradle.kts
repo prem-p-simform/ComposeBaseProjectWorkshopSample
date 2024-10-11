@@ -119,6 +119,7 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.constraintlayout.compose)
     implementation(libs.androidx.material.navigation)
+    implementation("androidx.compose.foundation:foundation-layout:1.7.3")
 
     // Material 3
     implementation(libs.androidx.material3)

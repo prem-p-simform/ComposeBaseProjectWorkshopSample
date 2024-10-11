@@ -6,4 +6,4 @@ flavors:
   - production
 
 global_secrets:
-  # - ApiKey
+  - ProductsEndPoint

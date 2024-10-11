@@ -3,5 +3,4 @@ package com.simform.app.domain.remote.service
 /**
  * Provides remote APIs
  */
-interface ApiService :
-    UserService
+interface ApiService : ProductService
