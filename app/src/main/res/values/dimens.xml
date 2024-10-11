@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="appSidePadding">16dp</dimen>
+    <dimen name="default_padding_small">4dp</dimen>
+    <dimen name="default_padding_medium">8dp</dimen>
+    <dimen name="default_padding_large">16dp</dimen>
+    <dimen name="default_btn_padding">16dp</dimen>
+    <dimen name="default_vertical_padding">12dp</dimen>
+    <dimen name="default_top_title_padding">20dp</dimen>
+    <dimen name="screen_title_spacing">20dp</dimen>
+    <dimen name="product_item_image_height">180dp</dimen>
+    <dimen name="product_item_image_spacing">4dp</dimen>
+</resources>

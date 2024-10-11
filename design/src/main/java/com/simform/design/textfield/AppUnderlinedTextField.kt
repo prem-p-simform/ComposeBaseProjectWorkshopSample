@@ -149,6 +149,7 @@ private fun AppBaseUnderlinedTextField(
  * @param prefix The prefix text to be displayed in the text field.
  * @param suffix The suffix text to be displayed in the text field.
  * @param supportingText The supporting text to be displayed in the text field.
+ * @param isError Whether the text field is in error state or not.
  * @param contentPadding The content padding to be applied to the text field.
  * @param onValueChange Called when the value changes.
  */

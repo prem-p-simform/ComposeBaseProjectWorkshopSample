@@ -8,8 +8,8 @@ object AppColorTokens {
         dark = Color(0xFF6D58F4)
     )
     val secondary = AppColorToken(
-        light = Color(0xFF6974DB),
-        dark = Color(0xFF6D58F4)
+        light = Color(0x666974DB),
+        dark = Color(0x666D58F4)
     )
     val textColor = AppColorToken(
         light = Color(0xFF2C2B32),

@@ -1,11 +1,12 @@
 package com.simform.app.domain.remote.service.di
 
 import android.content.Context
+import com.arkanakeys.ArkanaKeys
 import com.simform.bagel.intercept.BagelInterceptor
 import com.simform.app.BuildConfig
 import com.simform.app.domain.remote.apiresult.ApiResultCallAdapterFactory
 import com.simform.app.domain.remote.service.ApiService
-import com.simform.app.domain.remote.service.UserService
+import com.simform.app.domain.remote.service.ProductService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -78,7 +79,7 @@ object ApiModule {
         apiResultCallAdapterFactory: ApiResultCallAdapterFactory,
         networkJson: Json,
     ): Retrofit = Retrofit.Builder()
-        .baseUrl("https://randomuser.me/api/")
+        .baseUrl(ArkanaKeys.Global.productsEndPoint)
         .client(okHttpClient)
         .addConverterFactory(networkJson.asConverterFactory("application/json".toMediaType()))
         .addCallAdapterFactory(apiResultCallAdapterFactory)
@@ -89,6 +90,5 @@ object ApiModule {
         retrofit.create()
 
     @Provides
-    fun provideUserService(retrofit: Retrofit): UserService =
-        retrofit.create()
+    fun provideProductService(apiService: ApiService): ProductService = apiService
 }

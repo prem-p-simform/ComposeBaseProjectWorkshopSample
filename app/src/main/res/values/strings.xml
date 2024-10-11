@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">WorkshopSample</string>
+    <string name="title_login">Login</string>
+    <string name="title_products">Products</string>
+    <string name="title_filter_product">Filter Products</string>
+    <string name="title_continue">Continue</string>
+    <string name="title_filter">Filter</string>
+    <string name="title_reset">Reset</string>
+    <string name="error_phone_number">Invalid phone number</string>
+    <string name="placeholder_enter_phonenumber">Enter phone number</string>
+    <string name="title_enter_price_min">Enter price min</string>
+    <string name="title_enter_price_max">Enter price max</string>
+    <string name="rupee_symbol">\u20B9</string>
 </resources>
