@@ -1,11 +1,15 @@
 package com.simform.app.ui.product
 
 import android.content.res.Configuration
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
@@ -15,6 +19,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.simform.app.R
 import com.simform.app.common.previewparameter.ProductsPreviewParameter
 import com.simform.app.domain.model.Product
+import com.simform.app.ui.product.components.ProductItem
 import com.simform.design.appbar.AppTopAppBar
 import com.simform.design.icon.AppIconButton
 import com.simform.design.progress.AppFullScreenProgressIndicator
@@ -80,7 +85,22 @@ fun ProductsScreen(
                     .padding(innerPadding)
             )
         } else {
-            // TODO Show products here
+            LazyColumn(
+                modifier = Modifier
+                    .padding(innerPadding),
+                verticalArrangement = Arrangement.spacedBy(
+                    dimensionResource(R.dimen.default_padding_large)
+                )
+            ) {
+                items(uiState.products) { product ->
+                    ProductItem(
+                        modifier = Modifier,
+                        title = product.productTitle,
+                        price = "${stringResource(R.string.rupee_symbol)} ${product.productPrice}",
+                        image = product.productImages.first()
+                    )
+                }
+            }
         }
     }
 }

@@ -6,6 +6,7 @@ import androidx.lifecycle.viewModelScope
 import com.simform.app.ui.product.navigation.ProductFilter
 import com.simform.navigation.Navigator
 import com.simform.navigation.core.getNavArgs
+import com.simform.navigation.navigateUpWithResult
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
@@ -37,11 +38,24 @@ class ProductFilterViewModel @Inject constructor(
     }
 
     fun onFilterClick() {
-        // TODO Send filter result back
+        val uiState = uiState.value
+        navigator.navigateUpWithResult(
+            key = ProductFilter.Result.KEY,
+            result = ProductFilter.Result(
+                priceMin = uiState.priceMin,
+                priceMax = uiState.priceMax
+            )
+        )
     }
 
     fun onResetClick() {
-        // TODO Reset filter and send result back
+        navigator.navigateUpWithResult(
+            key = ProductFilter.Result.KEY,
+            result = ProductFilter.Result(
+                priceMin = null,
+                priceMax = null
+            )
+        )
     }
 
     private fun getDefaultUiState(): ProductFilterUiState = ProductFilterUiState(
